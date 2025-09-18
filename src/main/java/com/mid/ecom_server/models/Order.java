@@ -1,6 +1,9 @@
 package com.mid.ecom_server.models;
 
 
+import java.time.LocalDateTime;
+import java.util.*;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,7 +12,7 @@ import com.mid.ecom_server.enums.OrderStatus;
 @Document(collection="orders")
 public class Order {
     @Id
-    private String Iid;
+    private String id;
     private String userId;
 
     private Map<String,Integer> products;
@@ -18,11 +21,11 @@ public class Order {
     private LocalDateTime creditedAt=LocalDateTime.now();
 
     public String getIid() {
-        return Iid;
+        return id;
     }
 
     public void setIid(String iid) {
-        this.Iid = iid;
+        this.id = iid;
     }
 
     public String getUserId() {
