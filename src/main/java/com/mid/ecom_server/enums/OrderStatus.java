@@ -1,4 +1,4 @@
-package main.java.com.mid.ecom_server.enums;
+ package com.mid.ecom_server.enums;
 
 public enum OrderStatus {
     PENDING,
